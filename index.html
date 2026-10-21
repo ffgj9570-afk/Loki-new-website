@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080910">
+  <title>NeonKey — Reseller Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">N</span><span>NEON<span class="cyan">KEY</span></span><button class="close-nav" id="closeNav" aria-label="Close menu">×</button></div>
+      <div class="side-label">WORKSPACE</div>
+      <nav>
+        <button class="nav-link active" data-page="Dashboard">▦ <span>Dashboard</span></button>
+        <button class="nav-link" data-page="Buy Keys">▤ <span>Buy Keys</span></button>
+        <button class="nav-link" data-page="My Keys">⚿ <span>My Keys</span></button>
+        <button class="nav-link" data-page="Orders">◷ <span>Orders</span></button>
+        <button class="nav-link" data-page="Wallet">▣ <span>Wallet / Deposit</span></button>
+        <button class="nav-link" data-page="Resellers">♧ <span>My Resellers</span></button>
+        <button class="nav-link" data-page="History">↺ <span>History</span></button>
+        <button class="nav-link" data-page="Support">☏ <span>Support</span></button>
+      </nav>
+      <div class="side-label account-label">ACCOUNT</div>
+      <button class="nav-link" data-page="Settings">⚙ <span>Settings</span></button>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Demo mode <span class="tiny">v1.0</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="hamburger" id="openNav" aria-label="Open menu">☰</button>
+        <div class="page-heading"><div class="eyebrow">RESELLER WORKSPACE</div><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="top-actions"><button class="outline-btn" id="helpBtn">▶ <span>How it works</span></button><div class="avatar">NK</div></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><p class="muted">Welcome back, reseller</p><h2>Your keys. Your business.</h2><p class="muted">Manage digital products and track your orders in one place.</p></div>
+        <div class="demo-badge"><span class="status-dot"></span> PREVIEW MODE</div>
+      </section>
+
+      <section class="stats-grid" id="statsGrid">
+        <article class="stat-card violet"><div class="stat-top"><span>WALLET BALANCE</span><span class="stat-icon">▣</span></div><div class="stat-number" id="balance">₹0.00</div><div class="stat-foot">Demo balance <span>↗</span></div></article>
+        <article class="stat-card cyan-card"><div class="stat-top"><span>KEYS PURCHASED</span><span class="stat-icon">⚿</span></div><div class="stat-number">12</div><div class="stat-foot">Across all products</div></article>
+        <article class="stat-card pink"><div class="stat-top"><span>COMPLETED ORDERS</span><span class="stat-icon">✓</span></div><div class="stat-number">8</div><div class="stat-foot">Demo statistics</div></article>
+        <article class="stat-card green"><div class="stat-top"><span>RESELLERS</span><span class="stat-icon">♧</span></div><div class="stat-number">3</div><div class="stat-foot">Sample accounts</div></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel-card products-panel">
+          <div class="section-head"><div><div class="eyebrow">PRODUCT CATALOG</div><h3>Popular digital keys</h3></div><button class="text-btn" data-goto="Buy Keys">View all →</button></div>
+          <div class="product-list">
+            <div class="product"><div class="product-logo blue">W</div><div class="product-info"><strong>Windows License</strong><span>Digital activation key</span></div><div class="product-price">₹299</div><button class="buy-btn" data-product="Windows License" data-price="299">Buy</button></div>
+            <div class="product"><div class="product-logo purple">O</div><div class="product-info"><strong>Office License</strong><span>Productivity software key</span></div><div class="product-price">₹499</div><button class="buy-btn" data-product="Office License" data-price="499">Buy</button></div>
+            <div class="product"><div class="product-logo orange">V</div><div class="product-info"><strong>VPN Subscription</strong><span>Digital subscription code</span></div><div class="product-price">₹149</div><button class="buy-btn" data-product="VPN Subscription" data-price="149">Buy</button></div>
+          </div>
+          <p class="note">Sample products and prices only. Replace these with products you are authorized to resell.</p>
+        </article>
+        <article class="panel-card activity-panel">
+          <div class="section-head"><div><div class="eyebrow">LATEST UPDATES</div><h3>Recent activity</h3></div><span class="live-label">● LIVE DEMO</span></div>
+          <div class="activity"><span class="activity-icon cyan">＋</span><div><strong>Wallet created</strong><span>Demo account is ready</span></div><time>Now</time></div>
+          <div class="activity"><span class="activity-icon green">✓</span><div><strong>Sample order delivered</strong><span>Order #NK-1008</span></div><time>1h</time></div>
+          <div class="activity"><span class="activity-icon pink">⚿</span><div><strong>Key catalog updated</strong><span>3 sample products listed</span></div><time>Today</time></div>
+          <button class="secondary-btn full" data-goto="History">Open order history</button>
+        </article>
+      </section>
+
+      <section class="panel-card lower-panel" id="pagePanel">
+        <div class="section-head"><div><div class="eyebrow">QUICK ACTIONS</div><h3>Run your reseller business</h3></div></div>
+        <div class="quick-grid">
+          <button class="quick-action" data-goto="Wallet"><span class="quick-icon cyan">▣</span><strong>Deposit funds</strong><span>Add money to wallet</span></button>
+          <button class="quick-action" data-goto="Buy Keys"><span class="quick-icon pink">⚿</span><strong>Buy digital keys</strong><span>Browse the catalog</span></button>
+          <button class="quick-action" data-goto="My Keys"><span class="quick-icon green">▤</span><strong>My keys</strong><span>View delivered items</span></button>
+          <button class="quick-action" data-goto="Support"><span class="quick-icon orange">☏</span><strong>Get support</strong><span>Ask for help</span></button>
+        </div>
+      </section>
+      <footer>NEONKEY <span>•</span> Front-end preview only. No real payments or key delivery are enabled.</footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal">
+    <form method="dialog" class="modal-inner">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div class="eyebrow">NEONKEY DEMO</div><h2 id="modalTitle">Demo action</h2><p id="modalText">This is a preview action.</p>
+      <button class="primary-btn" value="close">Got it</button>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
